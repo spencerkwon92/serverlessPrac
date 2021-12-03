@@ -18,7 +18,12 @@ router.get('/', (req, res) => {
 router.post('/doSomething', async (req, res) => {
   try {
     // maybe do some database interaction or third-party API call here!
-    res.status(200).send({ data: 'success' })
+    res.status(200).send({ 
+      name: 'Sungjin Kwon',
+      major: 'Computer Science',
+      nationality: 'South Korea',
+      gender: 'Male',
+   })
   } catch (err) {
     console.log(err)
     res.status(400).send({ error: 'bad request' })
